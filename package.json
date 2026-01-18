@@ -1,0 +1,31 @@
+{
+  "name": "calvocobos",
+  "version": "1.0.0",
+  "description": "Tesis de Calvo Arteaga y Cobos Vargas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx @tailwindcss/cli -i tailwind/input.css -o tailwind/output.css",
+    "watch:css": "npx @tailwindcss/cli -i tailwind/input.css -o tailwind/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvocobos/calvocobos.github.io.git"
+  },
+  "keywords": [],
+  "author": "Calvo Arteaga y Cobos Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calvocobos/calvocobos.github.io/issues"
+  },
+  "homepage": "https://github.com/calvocobos/calvocobos.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2"
+  }
+}

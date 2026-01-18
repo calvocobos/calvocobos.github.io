@@ -1,0 +1,32 @@
+# ----------------------------------------
+# ✅ Archivo robots.txt
+# Controla qué puede indexar Google y otros bots
+# ----------------------------------------
+
+User-agent: *
+# 🔒 Bloquear todo lo que es de desarrollo o interno
+Disallow: /node_modules/
+Disallow: /tailwind/input.css
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.vscode/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.idea/
+Disallow: /metrics/
+Disallow: /scripts/
+Disallow: /act-python/
+
+# ✅ Permitir lo que sí es público
+Allow: /index.html
+Allow: /Carlos_Irvin_Tesis_bachiller_2025.pdf
+Allow: /tailwind/output.css
+Allow: /cbs/
+Allow: /img/
+Allow: /ico/
+Allow: /site.webmanifest   # Permitir que los buscadores y navegadores lo lean
+
+# Ubicación del sitemap:
+# Sitemap: https://calvocobos.github.io
+
+
