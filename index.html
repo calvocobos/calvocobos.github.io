@@ -1,37 +1,170 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo inicial</title>
+<html lang="es">
 
-    <!-- Tipografía -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
 
-    <!-- CSS compilado de Tailwind -->
-    <link href="./tailwind/output.css" rel="stylesheet" />
+    <!-- ===================== -->
+    <!-- 🌎 CONFIGURACIÓN BASE -->
+    <!-- ===================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS adicionales (opcionales) -->
-    <link href="./cbs/general.css" rel="stylesheet" />
-    <link href="./cbs/estilo.css" rel="stylesheet" />
-  </head>
+    <title>Repositorio de Tesis - Ingeniería de Sistemas | Calvo & Cobos (UAC)</title>
 
-  <body>
+    <meta name="description"
+        content="Repositorio académico oficial de la tesis de Ingeniería de Sistemas presentada en la Universidad Andina del Cusco. Incluye versión institucional UAC, registro SUNEDU (RENATI), DOI Zenodo, OSF y documentos complementarios.">
+    <meta name="author" content="Carlos Antonio Calvo Arteaga, Irvin Julian Cobos Vargas">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="application-name" content="Repositorio de Tesis UAC">
+
+    <!-- ===================== -->
+    <!-- 🔗 CANÓNICA -->
+    <!-- ===================== -->
+    <link rel="canonical" href="https://calvocobos.github.io/">
+    <link rel="alternate" hreflang="es-PE" href="https://calvocobos.github.io/">
+    <link rel="alternate" hreflang="x-default" href="https://calvocobos.github.io/">
+
+    <!-- ===================== -->
+    <!-- 🎓 CITATION (Scholar) -->
+    <!-- ===================== -->
+    <meta name="citation_title"
+        content="Desarrollo de un sistema de información web para la administración de procesos odontológicos">
+    <meta name="citation_author" content="Carlos Antonio Calvo Arteaga">
+    <meta name="citation_author" content="Irvin Julian Cobos Vargas">
+    <meta name="citation_publication_date" content="2025-12-18">
+    <meta name="citation_language" content="es">
+    <meta name="citation_institution" content="Universidad Andina del Cusco">
+    <meta name="citation_doi" content="10.5281/zenodo.18047949">
+    <meta name="citation_pdf_url" content="https://osf.io/rqzdx/files/qmzbp">
+    <meta name="citation_abstract_html_url" content="https://calvocobos.github.io/">
+
+    <!-- ===================== -->
+    <!-- 🌐 OPEN GRAPH -->
+    <!-- ===================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Repositorio de Tesis UAC">
+    <meta property="og:title" content="Repositorio de Tesis - Ingeniería de Sistemas (UAC)">
+    <meta property="og:description"
+        content="Repositorio académico integral de la tesis de Ingeniería de Sistemas. Incluye DOI, SUNEDU, OSF, UAC y documentación oficial.">
+    <meta property="og:url" content="https://calvocobos.github.io/">
+    <meta property="og:image" content="https://calvocobos.github.io/img/caratula/video-tesis-caratula-fallback.jpg">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- ===================== -->
+    <!-- 🐦 TWITTER -->
+    <!-- ===================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Repositorio de Tesis - Ingeniería de Sistemas (UAC)">
+    <meta name="twitter:description"
+        content="Repositorio académico de la tesis de Ingeniería de Sistemas con DOI, RENATI, OSF y versión institucional.">
+    <meta name="twitter:image" content="https://calvocobos.github.io/img/caratula/video-tesis-caratula-fallback.jpg">
+
+    <!-- ===================== -->
+    <!-- 🎨 PWA / TEMA -->
+    <!-- ===================== -->
+    <meta name="theme-color" content="#fbbf24">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Repositorio de Tesis UAC">
+
+    <!-- ===================== -->
+    <!-- 🖼️ ICONOS -->
+    <!-- ===================== -->
+    <link rel="icon" href="wmf/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="wmf/favicon-32.png">
+    <link rel="apple-touch-icon" href="wmf/favicon-maskable.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- ===================== -->
+    <!-- ⚡ FUENTES -->
+    <!-- ===================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ===================== -->
+    <!-- 🎨 CSS -->
+    <!-- ===================== -->
+    <link rel="stylesheet" href="tailwind/output.css">
+    <link rel="stylesheet" href="cbs/general.css">
+    <link rel="stylesheet" href="jquery/jquery-ui.1.13.2.css">
+
+    <!-- ===================== -->
+    <!-- 📜 JS -->
+    <!-- ===================== -->
+    <script defer src="jquery/jquery.min.3.7.1.js"></script>
+    <script defer src="jquery/jquery-ui.min.1.13.2.js"></script>
+    <script defer src="jquery/jquery.easing.min.1.4.1.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script defer src="cbs/general.js"></script>
+
+    <!-- ===================== -->
+    <!-- 📊 ANALYTICS -->
+    <!-- ===================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8PVDVN1E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3B8PVDVN1E');
+    </script>
+
+    <!-- ===================== -->
+    <!-- 🧩 SCHEMA.ORG -->
+    <!-- ===================== -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Repositorio de Tesis - Ingeniería de Sistemas",
+  "headline": "Repositorio académico integral de la tesis de Ingeniería de Sistemas",
+  "author": [
+    { "@type": "Person", "name": "Carlos Antonio Calvo Arteaga" },
+    { "@type": "Person", "name": "Irvin Julian Cobos Vargas" }
+  ],
+  "publisher": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidad Andina del Cusco"
+  },
+  "datePublished": "2025-12-18",
+  "inLanguage": "es",
+  "url": "https://calvocobos.github.io/",
+  "identifier": [
+    "https://hdl.handle.net/20.500.12557/8558",
+    "https://renati.sunedu.gob.pe/handle/renati/4844187",
+    "https://doi.org/10.5281/zenodo.18047949",
+    "https://osf.io/rqzdx/"
+  ],
+  "sameAs": [
+    "https://osf.io/rqzdx/",
+    "https://doi.org/10.5281/zenodo.18047949"
+  ]
+}
+</script>
+
+</head>
+
+<body>
     <div class="bg-testcolor text-white p-4 m-4 rounded-lg">
-      Fondo testcolor 🎨
+        Fondo testcolor 🎨
     </div>
 
     <div class="bg-verdefondo text-verdetexto p-4 m-4 rounded-lg">
-      Fondo con color personalizado en tailwind
+        Fondo con color personalizado en tailwind
     </div>
 
     <div class="bg-amber-200 dark:bg-amber-800 dark:text-white p-4 m-4 rounded-lg">
-      <p>
-        Este archivo HTML crea una página base configurada con Tailwind CSS y la fuente Ubuntu desde Google Fonts. Inicia en modo oscuro (class="dark") y aplica estilos personalizados definidos en tu configuración de Tailwind. Muestra dos bloques de ejemplo con colores distintos uno usando un color personalizado (bg-testcolor) y otro que cambia entre tonos claros y oscuros según el modo activo, además de un botón que permite alternar entre modo claro y oscuro. El script detecta el clic en ese botón, cambia la clase dark del elemento <html>, y guarda la preferencia del usuario en localStorage para mantener el tema seleccionado al recargar la página.
-      </p>
+        <p>
+            Este archivo HTML crea una página base configurada con Tailwind CSS y la fuente Ubuntu desde Google Fonts.
+            Inicia en modo oscuro (class="dark") y aplica estilos personalizados definidos en tu configuración de
+            Tailwind. Muestra dos bloques de ejemplo con colores distintos uno usando un color personalizado
+            (bg-testcolor) y otro que cambia entre tonos claros y oscuros según el modo activo, además de un botón que
+            permite alternar entre modo claro y oscuro. El script detecta el clic en ese botón, cambia la clase dark del
+            elemento <html>, y guarda la preferencia del usuario en localStorage para mantener el tema seleccionado al
+            recargar la página.
+        </p>
     </div>
 
     <button id="cambio-tema" class="m-4 p-4 rounded-lg bg-blue-900 text-white dark:bg-red-800">
@@ -39,29 +172,30 @@
     </button>
 
     <script>
-    // Esperar a que el DOM cargue
-    document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("cambio-tema");
-        const html = document.documentElement;
+        // Esperar a que el DOM cargue
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("cambio-tema");
+            const html = document.documentElement;
 
-        // Leer modo actual guardado (si existe)
-        const temaGuardado = localStorage.getItem("tema");
-        if (temaGuardado === "dark") {
-        html.classList.add("dark");
-        } else if (temaGuardado === "light") {
-        html.classList.remove("dark");
-        }
+            // Leer modo actual guardado (si existe)
+            const temaGuardado = localStorage.getItem("tema");
+            if (temaGuardado === "dark") {
+                html.classList.add("dark");
+            } else if (temaGuardado === "light") {
+                html.classList.remove("dark");
+            }
 
-        // Al hacer clic, alternar modo y guardar preferencia
-        btn.addEventListener("click", () => {
-        html.classList.toggle("dark");
+            // Al hacer clic, alternar modo y guardar preferencia
+            btn.addEventListener("click", () => {
+                html.classList.toggle("dark");
 
-        // Guardar la preferencia del usuario
-        const modoActual = html.classList.contains("dark") ? "dark" : "light";
-        localStorage.setItem("tema", modoActual);
+                // Guardar la preferencia del usuario
+                const modoActual = html.classList.contains("dark") ? "dark" : "light";
+                localStorage.setItem("tema", modoActual);
+            });
         });
-    });
     </script>
 
-  </body>
+</body>
+
 </html>

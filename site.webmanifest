@@ -1,0 +1,116 @@
+{
+  "name": "Repositorio de Tesis de Ingenieria de Sistemas",
+  "short_name": "Repositorio de Tesis",
+  "description": "Repositorio y Sustentación de Tesis del Sistema de Información Web Odontológico, Tesis de Ingeniería de Sistemas en la Universidad Andina del Cusco. Orientado a la digitalización del servicio odontológico.",
+  "lang": "es-PE",
+  "dir": "ltr",
+  "start_url": "index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#faac01",
+  "theme_color": "#fbbf24",
+  "categories": [
+    "ingeniería de sistemas",
+    "tesis universitaria",
+    "educación",
+    "tecnología",
+    "odontología"
+  ],
+  "iarc_rating_id": "pending",
+
+  "icons": [
+    {
+      "src": "wmf/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "wmf/favicon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "wmf/favicon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "wmf/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "wmf/favicon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "wmf/screenshot-vertical-1.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "label": "Pantalla de inicio del Sistema Dental",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "wmf/screenshot-vertical-2.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "label": "Repositorio de la tesis y documentación",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "wmf/screenshot-vertical-3.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "label": "Gestión de pacientes odontológicos",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "wmf/screenshot-vertical-4.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "label": "Registro y programación de citas",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "wmf/screenshot-vertical-5.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "label": "Panel de reportes y estadísticas",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "wmf/screenshot-horizontal-1.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "label": "Vista general del panel principal",
+      "form_factor": "wide"
+    },
+    {
+      "src": "wmf/screenshot-horizontal-2.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "label": "Gestión de pacientes y reportes",
+      "form_factor": "wide"
+    },
+    {
+      "src": "wmf/screenshot-horizontal-3.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "label": "Visualización de estadísticas odontológicas",
+      "form_factor": "wide"
+    }
+  ],
+
+  "related_applications": [],
+  "prefer_related_applications": false
+}
