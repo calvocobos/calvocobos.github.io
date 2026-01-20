@@ -147,54 +147,264 @@
 </head>
 
 <body>
-    <div class="bg-testcolor text-white p-4 m-4 rounded-lg">
-        Fondo testcolor 🎨
-    </div>
-
-    <div class="bg-verdefondo text-verdetexto p-4 m-4 rounded-lg">
-        Fondo con color personalizado en tailwind
-    </div>
-
-    <div class="bg-amber-200 dark:bg-amber-800 dark:text-white p-4 m-4 rounded-lg">
-        <p>
-            Este archivo HTML crea una página base configurada con Tailwind CSS y la fuente Ubuntu desde Google Fonts.
-            Inicia en modo oscuro (class="dark") y aplica estilos personalizados definidos en tu configuración de
-            Tailwind. Muestra dos bloques de ejemplo con colores distintos uno usando un color personalizado
-            (bg-testcolor) y otro que cambia entre tonos claros y oscuros según el modo activo, además de un botón que
-            permite alternar entre modo claro y oscuro. El script detecta el clic en ese botón, cambia la clase dark del
-            elemento <html>, y guarda la preferencia del usuario en localStorage para mantener el tema seleccionado al
-            recargar la página.
+    <!-- Encabezado principal del sitio -->
+  <header class="relative">
+    <!-- Navegación principal -->
+    <nav aria-label="Menú principal" class="fixed top-0 left-0 z-50 w-full bg-amber-300 shadow" role="navigation">
+      <div class="flex items-center justify-between w-full px-3">
+        <!-- Grupo 1: Contenido importante -->
+        <ul aria-label="Contenido importante" class="flex gap-1">
+          <li>
+            <a aria-label="Ir a la sección Repositorio"
+              class="block p-2 hover:bg-[#fe9941] focus-visible:ring-2 focus-visible:ring-[#fe9941] rounded"
+              href="#repositorio-academico">
+              <img alt="Icono libro PDF" class="h-4 w-auto" height="50" src="ico/libro.svg" width="54" />
+              <span class="sr-only">Repositorio</span>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección Video de exposición"
+              class="block p-2 hover:bg-[#fe9941] focus-visible:ring-2 focus-visible:ring-[#fe9941] rounded"
+              href="#video-de-sustentacion">
+              <img alt="Icono video" class="h-4 w-auto" height="50" src="ico/youtube.svg" width="50" />
+              <span class="sr-only">Video de exposición</span>
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección Instalar app"
+              class="block p-2 hover:bg-[#fe9941] focus-visible:ring-2 focus-visible:ring-[#fe9941] rounded"
+              href="#instalar-app">
+              <img alt="Icono instalar" class="h-4 w-auto" height="50" src="ico/instalar.svg" width="50" />
+              <span class="sr-only">Instalar App</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Grupo 2: Secciones del sitio (desktop) -->
+        <ul aria-label="Secciones principales del sitio" class="hidden md:flex justify-center text-slate-700">
+          <li>
+            <a aria-label="Ir a la sección Inicio"
+              class="block py-1 px-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]"
+              href="#inicio">
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección Video"
+              class="block py-1 px-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]"
+              href="#video-de-sustentacion">
+              Video
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección Autores"
+              class="block py-1 px-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]"
+              href="#autores-y-asesor">
+              Autores
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección APA 7"
+              class="block py-1 px-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]"
+              href="#normas-apa7">
+              Normas APA 7
+            </a>
+          </li>
+          <li>
+            <a aria-label="Ir a la sección Referencias"
+              class="block py-1 px-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]"
+              href="#repositorio-academico">
+              Repositorio
+            </a>
+          </li>
+        </ul>
+        <!-- Grupo 3: Icono central (móvil) -->
+        <ul aria-label="Ir a la sección Inicio" class="flex md:hidden justify-center flex-1">
+          <li>
+            <a aria-label="Ir a la sección Inicio"
+              class="block p-2 hover:bg-[#fe9941] focus-visible:ring-2 focus-visible:ring-[#fe9941] rounded"
+              href="#inicio">
+              <img alt="Icono central Inicio" class="h-6 w-auto mx-auto" height="50" src="ico/central.svg" width="50" />
+              <span class="sr-only">Inicio</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Grupo 4: Acciones -->
+        <ul aria-label="Acciones del sitio" class="flex gap-1">
+          <li>
+            <a aria-label="Ir a la sección Compartir"
+              class="block p-2 hover:bg-[#fe9941] focus-visible:ring-2 focus-visible:ring-[#fe9941] rounded"
+              href="#compartir">
+              <img alt="Icono compartir" class="h-4 w-auto" height="50" src="ico/compartir.svg" width="50" />
+              <span class="sr-only">Compartir</span>
+            </a>
+          </li>
+          <li>
+            <button aria-label="Cambiar a modo oscuro"
+              class="p-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]" id="btnoscuro">
+              <img alt="Icono modo oscuro" class="h-4 w-auto" height="50" src="ico/oscuro.svg" width="50" />
+            </button>
+          </li>
+          <li>
+            <button aria-label="Abrir menú lateral"
+              class="p-2 hover:bg-[#fe9941] rounded focus-visible:ring-2 focus-visible:ring-[#fe9941]" id="btnmenu">
+              <img alt="Icono menú lateral" class="h-4 w-auto" height="50" src="ico/menu.svg" width="50" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Menú lateral (inicialmente oculto) -->
+    <aside
+      class="fixed top-12 right-2 z-40 flex flex-col gap-1 bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg p-3 w-52 max-h-[80vh] overflow-y-auto"
+      id="menu-lateral" style="display: none;">
+      <h2 class="sr-only">Menú lateral de secciones</h2>
+      <ul class="text-sm font-semibold">
+        <li>
+          <a aria-label="Ir a la sección Inicio"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#inicio">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Enfoque"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#enfoque">
+            Enfoque
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Desarrollo"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#desarrollo">
+            Desarrollo
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Herramientas"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#herramientas">
+            Herramientas
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Video"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#video-de-sustentacion">
+            Video
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Autores"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#autores-y-asesor">
+            Autores
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Presentación"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#presentacion">
+            Presentación
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Jurado"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#jurado">
+            Jurado
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Evaluación"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#evaluacion">
+            Evaluación
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Referencias"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#repositorio-academico">
+            Referencias
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección normas ISO"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#iso">
+            Normas ISO IEC
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Normas APA 7"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#normas-apa7">
+            Normas APA 7
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Leyes"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#leyes">
+            Leyes
+          </a>
+        </li>
+        <li>
+          <a aria-label="Compartir" class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600"
+            href="#compartir">
+            Compartir
+          </a>
+        </li>
+        <li>
+          <a aria-label="Ir a la sección Comentarios"
+            class="block py-2 px-3 rounded hover:bg-amber-300 dark:hover:bg-amber-600" href="#comentarios">
+            Comentarios
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- Contenido del encabezado -->
+    <section class="mx-3 md:mx-20 pt-28 pb-20 px-4 text-center flex flex-col md:flex-row items-center gap-6"
+      id="inicio">
+      <article class="flex-1">
+        <h1 class="text-2xl font-bold text-[#1d1d1e] dark:text-white lg:text-4xl leading-tight">
+          Desarrollo de un sistema de información web para la administración de los procesos de registro, atención, inventario y finanzas del consultorio odontológico Lalysdent del distrito de Cusco.
+        </h1>
+        <h2 class="pt-2 text-xl font-semibold text-[#1d1d1e] dark:text-white lg:text-3xl">
+          Universidad Andina del Cusco
+        </h2>
+        <h3 class="pb-1 text-xl font-semibold text-[#1d1d1e] dark:text-white lg:text-3xl">
+          Facultad de Ingeniería y Arquitectura
+        </h3>
+        <p class="font-bold text-center text-[#1d1d1e] dark:text-white">
+          Calvo Arteaga &amp; Cobos Vargas
         </p>
-    </div>
-
-    <button id="cambio-tema" class="m-4 p-4 rounded-lg bg-blue-900 text-white dark:bg-red-800">
-        cambiar tema claro oscuro
-    </button>
-
-    <script>
-        // Esperar a que el DOM cargue
-        document.addEventListener("DOMContentLoaded", () => {
-            const btn = document.getElementById("cambio-tema");
-            const html = document.documentElement;
-
-            // Leer modo actual guardado (si existe)
-            const temaGuardado = localStorage.getItem("tema");
-            if (temaGuardado === "dark") {
-                html.classList.add("dark");
-            } else if (temaGuardado === "light") {
-                html.classList.remove("dark");
-            }
-
-            // Al hacer clic, alternar modo y guardar preferencia
-            btn.addEventListener("click", () => {
-                html.classList.toggle("dark");
-
-                // Guardar la preferencia del usuario
-                const modoActual = html.classList.contains("dark") ? "dark" : "light";
-                localStorage.setItem("tema", modoActual);
-            });
-        });
-    </script>
+      </article>
+      <figure class="flex-1 mx-auto overflow-hidden rounded-lg shadow-lg">
+        <a aria-label="Ver exposición de tesis en video" href="#video-de-sustentacion">
+          <picture>
+            <!-- AVIF -->
+            <source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw" srcset="
+          img/caratula/video-tesis-caratula-360.avif 360w,
+          img/caratula/video-tesis-caratula-720.avif 720w,
+          img/caratula/video-tesis-caratula-1280.avif 1280w,
+          img/caratula/video-tesis-caratula-1920.avif 1920w
+        " type="image/avif" />
+            <!-- WebP -->
+            <source sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw" srcset="
+          img/caratula/video-tesis-caratula-360.webp 360w,
+          img/caratula/video-tesis-caratula-720.webp 720w,
+          img/caratula/video-tesis-caratula-1280.webp 1280w,
+          img/caratula/video-tesis-caratula-1920.webp 1920w
+        " type="image/webp" />
+            <!-- Fallback JPG -->
+            <img alt="Miniatura del video de exposición de tesis"
+              class="w-full h-auto aspect-[16/9] transition-transform duration-300 hover:scale-110" decoding="async"
+              height="1080" src="img/caratula/video-tesis-caratula-fallback.jpg" width="1920" />
+          </picture>
+        </a>
+        <figcaption class="sr-only">
+          Carátula del video de la sustentación de tesis
+        </figcaption>
+      </figure>
+    </section>
+  </header>
+  <!-- ondas celestes del inicio -->
+  <div class="ondas bg-[#c4dbff] dark:bg-[#1b52aa]"></div>
+  <!-- Ancho y Alto de la pantalla -->
+  <div class="tamano bg-slate-500 text-slate-50">
+    <p class="ancho"></p>
+    <p class="alto"></p>
+  </div>
+  
 
 </body>
 
